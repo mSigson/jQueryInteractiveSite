@@ -43,7 +43,7 @@ h3 {
 	width: 100%;
 	text-align: center;
 	@include fontSize(40);
-	margin-bottom: 0;
+	margin-bottom: -30px;
 	margin-top: 0;
 }
 
@@ -51,7 +51,7 @@ p {
 	color: #fff;
 	font-family: 'EB Garamond', serif;
 	margin: 0 auto;
-	line-height: 15px;
+	line-height: 50px;
 	@include fontSize(13);
 }
 .introScore p {
@@ -142,6 +142,23 @@ button {
 		color: white;
 	}
 }
+
+.points {
+	@include respond-to(large) {
+		display: none;
+	} @include respond-to(tablet) {
+		display: inline-block;
+	}
+}
+
+.points_reminder {
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
 
 .from {
 	margin-top: 15px;

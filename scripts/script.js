@@ -78,8 +78,8 @@ $(document).ready(function(){
 	});
 
 	$(".lets_play").on('click', function(){
-		$('#question1').show();
-		$('header').hide();
+		$('header').fadeOut();
+		$('#question1').fadeIn(1200);
 	});
 
 // MUSIC BUTTONS
