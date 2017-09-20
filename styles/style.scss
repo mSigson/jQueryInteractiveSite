@@ -12,6 +12,9 @@
 
 header .container {
 	padding: 15px 30px;
+	@include respond-to(phone) {
+		padding: 20px 0px;
+	}
 }
 
 .welcome button {
@@ -49,13 +52,14 @@ header .container {
 .intro1, .introScore {
 	margin: 0 auto;
 	margin-top: 20px;
-	@include respond-to(tablet) {
-		width: 100%;
-	}
 }
 
 .intro1 {
 	width: 50%;
+	@include respond-to(tablet) {
+		width: 70%;
+		line-height: 1.5;
+	}
 }
 
 .intro1 p {
@@ -65,6 +69,9 @@ header .container {
 
 .introScore {
 	width: 70%;
+	@include respond-to(tablet) {
+		line-height: 1.5;
+	}
 }
 
 .introScore p {
@@ -93,8 +100,30 @@ header .container {
 	@include respond-to(tablet) {
 		padding: 20px;
 		width: 80%;
-		height: 95vh;
+	} @include respond-to(ex-small) {
+		padding: 15px;
+		width: 95%;
 	}
+}
+
+.container.welcome_container, .container.results {
+	transform: translateY(20%);
+	@include respond-to(tablet) {
+		transform: translateY(18%);
+	} @include respond-to(ex-small) {
+		transform: translateY(7%);
+	}
+		
+}
+
+#top_result, #middle_result, #bottom_result, #answers {
+	transform: translateY(20%);
+	@include respond-to(tablet) {
+		transform: translateY(18%);
+	} @include respond-to(ex-small) {
+		transform: translateY(7%);
+	}
+		
 }
 
 .question_number {
@@ -132,7 +161,9 @@ header .container {
 	justify-content: space-around;
 	@include respond-to(tablet) {
 		width: 100%;
-		}
+	} @include respond-to(phone) {
+		padding: 0px;
+	}
 }
 
 .time_frame {
@@ -184,6 +215,11 @@ header .container {
 .question_result p {
 	@include fontSize(30);
 	font-family: 'Paytone One', sans-serif;
+	@include respond-to(phone) {
+		@include fontSize(15);
+		margin: 0;
+		line-height: 1;
+	}
 }
 
 .activate {
@@ -199,6 +235,9 @@ header .container {
 	background-color: #16134A;
 	&:hover {
 		background: #6A70B3;
+	}
+	@include respond-to(phone) {
+		margin-top: 10px;
 	}
 }
 
@@ -257,9 +296,14 @@ header .container {
 ul.correct {
 	text-align: center;
 	list-style-type: none;
+	padding-left: 25px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-family: 'EB Garamond', serif;
+	color: white;
+	@include fontSize(13);
+	letter-spacing: 0.2px;
 }
 
 ul.correct li {
