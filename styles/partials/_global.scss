@@ -45,6 +45,11 @@ h3 {
 	@include fontSize(40);
 	margin-bottom: -30px;
 	margin-top: 0;
+	@include respond-to(tablet) {
+		@include fontSize(20);
+		text-align: left;
+		margin-bottom: 10px;
+	}
 }
 
 p {
@@ -157,6 +162,9 @@ button {
 	width: 50%;
 	margin: 0 auto;
 	margin-top: 20px;
+	@include respond-to(tablet) {
+		display: none;
+	}
 }
 
 
